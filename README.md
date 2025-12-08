@@ -34,7 +34,8 @@ It showcases the capabilities of the CGame framework and is fully open-source fo
 ```bash
 git clone https://github.com/mhassnaink/FlappyBird.git
 ```
-## 🪪License
-```bash
-git clone https://github.com/mhassnaink/FlappyBird/LICENSE.txt
-```
+## 🪪 License
+
+The project is licensed under the **Flappy Bird - CGame Edition License**.  
+Read the full license [here](https://github.com/mhassnaink/FlappyBird/blob/main/LICENSE.txt).
+
