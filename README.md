@@ -2,7 +2,7 @@
 
 ![Flappy Bird Banner](build/resources/logo.png)
 
-**A small, fast, open-source Flappy Bird clone built using [CGame Framework](https://github.com/mhassnaink/cgame).**
+**A small, fast, open-source Flappy Bird clone built using [CGame Framework](https://github.com/mhassnaink/cgame/releases).**
 
 ---
 
