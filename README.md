@@ -1,8 +1,10 @@
-# Flappy Bird - CGame Edition
+<p align="center">
+  <img src="build/resources/image.png" alt="Flappy Bird Banner" width="400"/>
+</p>
 
-![Flappy Bird Banner](build/resources/image.png)
+<h1 align="center">Flappy Bird - CGame Edition</h1>
 
-**A small, fast, open-source Flappy Bird clone built using [CGame Framework](https://github.com/mhassnaink/cgame/releases).**
+<p align="center"><strong>A small, fast, open-source Flappy Bird clone built using <a href="https://github.com/mhassnaink/cgame/releases">CGame Framework</a>.</strong></p>
 
 ---
 
@@ -31,3 +33,8 @@ It showcases the capabilities of the CGame framework and is fully open-source fo
 
 ```bash
 git clone https://github.com/mhassnaink/FlappyBird.git
+```
+## 🪪License
+```bash
+git clone https://github.com/mhassnaink/FlappyBird/LICENSE.txt
+```
