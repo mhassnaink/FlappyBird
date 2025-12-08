@@ -1,0 +1,22 @@
+Flappy Bird - CGame Edition License
+
+Copyright (c) 2025 M.Hassnain K
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated assets (the "Software"), to use, copy, modify,
+compile, and distribute the Software **for non-commercial purposes only**,
+including publishing it for free.
+
+The game assets (images, icons, sprites) included in this project may be used
+and shared freely for personal, educational, or non-commercial projects **only**.
+They may **not** be sold or used in commercial projects without explicit written permission
+from the copyright holder.
+
+Redistribution of the Software, with or without modification, must include this
+license and credit to the original author: Doctor Ghost.
+
+THE SOFTWARE AND ASSETS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+OR OTHER LIABILITY ARISING FROM THE USE OR DISTRIBUTION OF THE SOFTWARE OR ASSETS.
