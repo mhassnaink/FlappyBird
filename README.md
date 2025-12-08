@@ -1,6 +1,6 @@
 # Flappy Bird - CGame Edition
 
-![Flappy Bird Banner](build/resources/logo.png)
+![Flappy Bird Banner](build/resources/image.png)
 
 **A small, fast, open-source Flappy Bird clone built using [CGame Framework](https://github.com/mhassnaink/cgame/releases).**
 
