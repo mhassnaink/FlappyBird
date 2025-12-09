@@ -180,6 +180,7 @@ public :
         score          = 0     ;
         warmOrange     = {255, 255, 144};
         white          = {240, 240, 240};
+        brown          = {200,  83,  44};
         cgame.init ();
         screen = cgame.display.set_mode (this->width, this->height, CGAME_FLAG_DPI_AWARE);
         (void)screen;
@@ -212,7 +213,7 @@ private:
     bool scoreCollision;
     Bird           bird;
     Pillar       pillar;
-    Color    warmOrange, white;
+    Color    warmOrange, white, brown;
     void Run ()
     {
         while (running)
@@ -228,11 +229,8 @@ private:
         bgImageX -= (dt * speed);
         if (bgImageX <= -720.0f) { bgImageX = 0.0f; }
 
-        if (!cgame.key.pressed (cgame.K_a))
-        {
-            pillar.Update            (dt, gameRunning);
-            bird  .Update            (dt, gameRunning);
-        }
+        pillar.Update (dt, gameRunning);
+        bird  .Update (dt, gameRunning);
         if (pillar.CheckCollision (bird.GetBirdCollisionBox  ())) { gameRunning = false; }
         if (pillar.CheckCollision (bird.GetScoreCollisionBox ()) && !scoreCollision) 
         {
@@ -255,8 +253,10 @@ private:
             cgame.text.draw_complex ("GAME OVER!", 78, 320, L"Arial", 50.0f, white.r, white.g, white.b); 
             cgame.text.draw_complex ("PRESS SPACE TO RESTART", 0, 390, L"Arial", 34.0f, white.r, white.g, white.b); 
         }
-        cgame.text.draw_complex   ("SCORE:", 275, 10, L"Arial", 30.0f, warmOrange.r, warmOrange.g, warmOrange.b);                         // score drawing
-        cgame.text.draw_complex   (std::to_string (score).c_str (), 400, 10, L"Arial",  30.0f, warmOrange.r, warmOrange.g, warmOrange.b); // score drawing
+        cgame.draw.rounded_fill_rect (285, 8, 140, 40, 12, brown.r, brown.g, brown.b);
+        cgame.text.draw_complex      ("Score:", 285, 11, L"Arial", 30.0f, warmOrange.r, warmOrange.g, warmOrange.b);                         // score drawing
+        cgame.text.draw_complex      (std::to_string (score).c_str (), 375, 11, L"Arial",  30.0f, warmOrange.r, warmOrange.g, warmOrange.b); // score drawing
+        
         cgame.display.flip        ();
     }
     void RestartGame ()
