@@ -1,4 +1,4 @@
-#include <cgame.h> // download at https://github.com/mhassnaink/cgame/releases
+#include <cgame.h>
 // C++ STL
 #include <iostream>
 #include <vector>
@@ -178,8 +178,8 @@ public :
         speed          = 8.0f  ;
         scoreCollision = false ;
         score          = 0     ;
-        warmOrange     = {255, 200,   0};
-        goldenYellow   = {255, 174,  66};
+        warmOrange     = {255, 255, 144};
+        white          = {240, 240, 240};
         cgame.init ();
         screen = cgame.display.set_mode (this->width, this->height, CGAME_FLAG_DPI_AWARE);
         (void)screen;
@@ -212,7 +212,7 @@ private:
     bool scoreCollision;
     Bird           bird;
     Pillar       pillar;
-    Color    warmOrange, goldenYellow;
+    Color    warmOrange, white;
     void Run ()
     {
         while (running)
@@ -228,9 +228,11 @@ private:
         bgImageX -= (dt * speed);
         if (bgImageX <= -720.0f) { bgImageX = 0.0f; }
 
-        pillar.Update            (dt, gameRunning);
-        bird  .Update            (dt, gameRunning);
-        
+        if (!cgame.key.pressed (cgame.K_a))
+        {
+            pillar.Update            (dt, gameRunning);
+            bird  .Update            (dt, gameRunning);
+        }
         if (pillar.CheckCollision (bird.GetBirdCollisionBox  ())) { gameRunning = false; }
         if (pillar.CheckCollision (bird.GetScoreCollisionBox ()) && !scoreCollision) 
         {
@@ -250,8 +252,8 @@ private:
         bird  .Draw               ();
         if (gameRunning == false) 
         { 
-            cgame.text.draw_complex ("GAME OVER!", 78, 320, L"Arial", 50.0f, goldenYellow.r, goldenYellow.g, goldenYellow.b); 
-            cgame.text.draw_complex ("PRESS SPACE TO RESTART", 0, 390, L"Arial", 34.0f, goldenYellow.r, goldenYellow.g, goldenYellow.b); 
+            cgame.text.draw_complex ("GAME OVER!", 78, 320, L"Arial", 50.0f, white.r, white.g, white.b); 
+            cgame.text.draw_complex ("PRESS SPACE TO RESTART", 0, 390, L"Arial", 34.0f, white.r, white.g, white.b); 
         }
         cgame.text.draw_complex   ("SCORE:", 275, 10, L"Arial", 30.0f, warmOrange.r, warmOrange.g, warmOrange.b);                         // score drawing
         cgame.text.draw_complex   (std::to_string (score).c_str (), 400, 10, L"Arial",  30.0f, warmOrange.r, warmOrange.g, warmOrange.b); // score drawing
